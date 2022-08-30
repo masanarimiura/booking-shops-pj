@@ -1,0 +1,538 @@
+/* common */
+body {
+    --tw-bg-opacity: 1;
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+    height: 100vh;
+}
+
+/* ↓drawer */
+.header .nav {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    background: #fff;
+    transition: 0.7s;
+    text-align: center;
+    z-index: 1;
+}
+.header .nav ul {
+    margin-top: 200px;
+}
+.header .nav ul li {
+    list-style-type: none;
+    margin-top: 30px;
+}
+.header .nav ul li a {
+    text-decoration: none;
+    color: blue;
+}
+.header .nav__in {
+    transform: translateX(100%);
+}
+.header .menu {
+    display: inline-block;
+    width: 36px;
+    height: 32px;
+    cursor: pointer;
+    position: relative;
+    left: 80px;
+    top: 30px;
+    background: rgb(39, 83, 203);
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px 0px rgb(175, 175, 175);
+    margin-bottom: 40px;
+    z-index: 1;
+}
+.header .menu .menu__line--top,
+.header .menu .menu__line--middle,
+.header .menu .menu__line--bottom {
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    transition: 0.5s;
+    left: 10px;
+}
+.header .menu .menu__line--top {
+    top: 10px;
+    width: 30%;
+}
+.header .menu .menu__line--middle {
+    top: 15px;
+    width: 50%;
+}
+.header .menu .menu__line--bottom {
+    bottom: 10px;
+    width: 15%;
+}
+.header .menu.border-cross span:nth-of-type(1) {
+    top: 14px;
+    left: 8px;
+    transform: rotate(45deg);
+    width: 50%;
+}
+.header .menu.border-cross span:nth-of-type(2) {
+    opacity: 0;
+}
+.header .menu.border-cross span:nth-of-type(3) {
+    top: 14px;
+    left: 8px;
+    transform: rotate(-45deg);  
+    width: 50%;
+}
+.header .menu .menu__ttl {
+    position: absolute;
+    top: 6px;
+    left: 50px;
+    font-size: 20px;
+    color: rgb(39, 83, 203);
+    transition: 0.5s;
+}
+.header .menu .menu__ttl h1 {
+    font-weight: bold;
+}
+.header .menu .ttl__out {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+/* ↓indexページ */
+.header__box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+}
+.header__box .search__box {
+    display: inline-block;
+    width: 500px;
+    height: 32px;
+    position: relative;
+    right: 80px;
+    top: 20px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px 0px rgb(175, 175, 175);
+    margin-bottom: 40px;
+    padding-left: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+.header__box .search__box select {
+    display: inline-block;
+    width: 17%;
+    height: 26px;
+    border: none;
+    border-right: solid rgb(229, 229, 229) 2px;
+    background-image: url(../image/arrow.png);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: 60px 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+.header__box .search__box input {
+    padding-left: 35px;
+    height: 30px;
+    width: 50%;
+    border: none;
+    background-image: url(../image/magnifying_glass.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: 10px 10px;
+}
+.shops {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+}
+.shop__card {
+    margin: 5px 5px;
+    width: 310px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px 0px rgb(175, 175, 175);
+}
+.shop__card .card__img img {
+    width: 310px;
+    height: 155px;
+    object-fit: cover;
+    border-radius: 6px 6px 0 0;
+}
+.shop__card .card__content {
+    padding: 15px 25px;
+}
+.shop__card .card__ttl {
+    margin-bottom: 7px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.shop__card .tag {
+    font-size: 14px;
+}
+.shop__card .card__tag {
+    display: inline-block;
+    color: #5d5d5d;
+    margin-bottom: 10px;
+}
+.shop__card .card__content__inner {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+.shop__card .card__detail {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 5px 15px;
+    background: rgb(39, 83, 203);
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 14px;
+}
+.shop__card .heart__img input, .shop__card .heart__img img{
+    width: 50px;
+}
+.shops .error {
+    color: red;
+}
+
+/* thanksページ */
+.thanks__box {
+    display: block;
+    margin: 100px auto;
+    width: 400px;
+    height: 250px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px 0px rgb(175, 175, 175);
+    text-align: center;
+}
+.thanks__box h2 {
+    padding-top: 80px;
+    font-weight: normal;
+    font-size: 18px;
+}
+.thanks__box .return {
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    background: rgb(39, 83, 203);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 12px;
+}
+
+/* registerページ と loginページ */
+.register-login__box x-guest-layout{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px 0px rgb(175, 175, 175);
+}
+.register-login__box .px-6 {
+    padding: 0;
+    margin-top: -100px;
+}
+.register-login__box h2 {
+    padding: 20px;
+    border-radius: 6px 6px 0 0;
+    background: rgb(39, 83, 203);
+    color: #fff;
+    font-weight: normal;
+}
+.register-login__box .from__box {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+.register-login__box .from__box .input__box {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    height: 32px;
+    right: 80px;
+    top: 20px;
+    background: #fff;
+    margin: 10px auto;
+    border-radius: 0 0 0 0;
+}
+.register-login__box .from__box .input__box img {
+    display: inline-block;
+    margin-top: 5px;
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+}
+.register-login__box .from__box .input__box .x-input {
+    display: inline-block;
+    height: 90%;
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 0 0 0 0;
+}
+.register-login__box .from__box .submit__btn__box {
+    width: 93%;
+    height: 60px;
+}
+.register-login__box .from__box .submit__btn__box .submit__btn {
+    display: block;
+    margin: 15px 0 15px auto;
+    padding: 10px 15px;
+    background: rgb(39, 83, 203);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+    border: none;
+}
+
+/* shop ページ */
+.shop-detail {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+}
+.shop-detail__card__box,
+.book__card__box {
+    position: relative;
+    width: 45%;
+}
+.shop-detail__ttl {
+    margin-top: 50px;
+    height: 50px;
+}
+.shop-detail__ttl .return__btn {
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px 0px rgb(175, 175, 175);
+    position: relative;
+    display: inline-block;
+}
+.shop-detail__ttl .return__btn::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border: 0px;
+    border-top: solid 2px #000;
+    border-right: solid 2px #000;
+    -ms-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    position: absolute;
+    top: 50%;
+    left: 42%;
+    margin-top: -4px;
+}
+.shop-detail__ttl h2 {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 24px;
+}
+.shop-detail__card .card__img img {
+    width: 100%;
+}
+.shop-detail__card .tag p {
+    display: inline-block;
+    margin: 15px 0;
+}
+.book__card {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    top: -50px;
+    background: rgb(39, 83, 203);
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px 0px rgb(175, 175, 175);
+}
+.book__card .book__ttl {
+    margin: 20px;
+}
+.book__card .book__ttl h2 {
+    font-size: 20px;
+    color: #fff;
+}
+.book__card .form__box {
+    margin: 20px;
+}
+.book__card .form__box .input__box {
+    margin-bottom: 10px;
+}
+.book__card .form__box .input__box input {
+    padding: 6px 10px;
+    width: 200px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.book__card .form__box .select__box {
+    margin-bottom: 10px;
+    width: 100%;
+}
+.book__card .form__box .select__box select {
+    padding: 6px 10px;
+    width: 90%;
+    border: none;
+    border-radius: 6px;
+    background-image: url(../image/arrow.png);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: 97% 8px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+.book__card .form__box .book-data {
+    width: 90%;
+    background: rgb(80, 115, 211);
+    border-radius: 6px;
+}
+.book__card .form__box .book-data table {
+    display: block;
+    padding: 20px;
+}
+.book__card .form__box .book-data td {
+    padding: 5px 20px;
+    color: #fff;
+}
+.book__card .submit__btn__box {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.book__card .submit__btn__box input {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 0 0 6px 6px;
+    background: rgb(0, 55, 207);
+    color: #fff;
+    cursor: pointer;
+}
+
+/* my-page */
+.my-page {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 85%;
+}
+.booked__box {
+    width: 33%;
+}
+.booked__box .booked__ttl h2 {
+    margin-top: 100px;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+.booked__box .booked__card {
+    margin-bottom: 20px;
+    width: 100%;
+    background: rgb(39, 83, 203);
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px 0px rgb(175, 175, 175);
+}
+.booked__box .booked__card .card__ttl {
+    padding: 20px 20px 20px 40px;
+    position: relative;
+}
+.booked__box .booked__card .card__ttl img, .booked__box .booked__card .card__ttl .cross {
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    width: 20px;
+}
+.booked__box .booked__card .card__ttl .cross {
+    position: absolute;
+    right: 30px;
+    top: 35px;
+}
+.booked__box .booked__card .card__ttl h3 {
+    display: inline-block;
+    padding: 20px 20px;
+    color: #fff;
+    font-weight: normal;
+}
+
+
+
+
+.openBtn {
+    display: block;
+    margin: 50px auto;
+}
+.modal {
+    display: none;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.5);
+}
+.modal__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.modal__content-inner{
+    background-color: white;
+    width: 500px;
+    text-align: center;
+    padding: 50px;
+}
+.modal__booked-data {
+    background-color: rgba(112, 34, 34, 0.5);
+    border
+    width: 100%;
+    margin: 30px auto;
+}
+.modal__booked-data table {
+    display: inline-block;
+}
+.modal__booked-data table td{
+    padding: 10px 10px;
+}
+.booked__box .booked__card .booked-data table {
+    display: block;
+    padding: 0 20px 30px 20px;
+}
+.booked__box .booked__card .booked-data td {
+    padding: 10px 20px;
+    color: #fff;
+}
+.liked__box {
+    width: 60%;
+}
+.liked__box .username h2 {
+    margin-top: 20px;
+    font-size: 30px;
+}
+.liked__box .liked__ttl h2 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+.liked__box .liked__card__box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.liked__box .error,.booked__box .error {
+    color: red;
+}
+
