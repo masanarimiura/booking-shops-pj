@@ -10,7 +10,7 @@
     </div>
     <div class="shop-detail__card">
       <div class="card__img">
-        <img src="{{asset($shop->image_url)}}" alt="No image">
+        <img src="{{$shop->image_url}}" alt="No image">
       </div>
       <div class="tag">
         <p>#{{$shop->area->name}}</p>
