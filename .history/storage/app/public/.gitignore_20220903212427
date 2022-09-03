@@ -1,0 +1,4 @@
+*
+!storage/app/public/image
+!public/storage
+!.gitignore

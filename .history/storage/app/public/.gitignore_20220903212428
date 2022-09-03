@@ -1,0 +1,4 @@
+*
+!storage/app/pupublic/image
+!public/storage
+!.gitignore
