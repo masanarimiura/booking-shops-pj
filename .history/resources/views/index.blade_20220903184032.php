@@ -46,7 +46,7 @@
   @foreach ($shops as $shop)
   <div class="shop__card">
     <div class="card__img">
-        <img src="{{asset($shop->image_url)}}" alt="No image">
+        <img src="{{}}" alt="No image">
     </div>
     <div class="card__content">
       <div class="card__content__inter">
