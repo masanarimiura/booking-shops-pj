@@ -1,4 +1,4 @@
-/* common */
+/* ↓common */
 body {
     --tw-bg-opacity: 1;
     background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -14,6 +14,7 @@ body {
     background: #fff;
     transition: 0.7s;
     text-align: center;
+    z-index: 1;
 }
 .header .nav ul {
     margin-top: 200px;
@@ -41,6 +42,14 @@ body {
     border-radius: 6px;
     box-shadow: 2px 2px 2px 0px rgb(175, 175, 175);
     margin-bottom: 40px;
+    z-index: 1;
+}
+@media screen and (max-width: 768px) {
+    .header .menu {
+        left: 2px;
+        top: 2px;
+        margin-bottom: 0px;
+        }
 }
 .header .menu .menu__line--top,
 .header .menu .menu__line--middle,
@@ -65,16 +74,16 @@ body {
     bottom: 10px;
     width: 15%;
 }
-.header .menu .menu.border-cross span:nth-of-type(1) {
+.header .menu.border-cross span:nth-of-type(1) {
     top: 14px;
     left: 8px;
     transform: rotate(45deg);
     width: 50%;
 }
-.header .menu .menu.border-cross span:nth-of-type(2) {
+.header .menu.border-cross span:nth-of-type(2) {
     opacity: 0;
 }
-.header .menu .menu.border-cross span:nth-of-type(3) {
+.header .menu.border-cross span:nth-of-type(3) {
     top: 14px;
     left: 8px;
     transform: rotate(-45deg);
@@ -118,20 +127,37 @@ body {
     padding-top: 6px;
     padding-bottom: 6px;
 }
+@media screen and (max-width: 768px) {
+    .header__box .search__box {
+        width: 220px;
+        height: 20px;
+        position: relative;
+        right: 2px;
+        top: 2px;
+        margin-bottom: 0px;
+        }
+}
 .header__box .search__box select {
     display: inline-block;
-    width: 17%;
+    width: 18%;
     height: 26px;
     border: none;
     border-right: solid rgb(229, 229, 229) 2px;
     background-image: url(../image/arrow.png);
     background-repeat: no-repeat;
     background-size: 10px;
-    background-position: 60px 10px;
+    background-position: 70px 10px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+    .header__box .search__box select {
+        width: 24%;
+        height: 20px;
+        font-size: 10px;
+        }
 }
 .header__box .search__box input {
     padding-left: 35px;
@@ -143,19 +169,44 @@ body {
     background-size: 15px;
     background-position: 10px 10px;
 }
+@media screen and (max-width: 768px) {
+    .header__box .search__box input {
+        padding-left: 25px;
+        height: 20px;
+        width: 30%;
+        border: none;
+        background-image: url(../image/magnifying_glass.png);
+        background-repeat: no-repeat;
+        background-size: 15px;
+        background-position: 5px 5px;
+        }
+}
 .shops {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
     width: 90%;
     margin: 0 auto;
 }
+@media screen and (max-width: 768px) {
+    .shops {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: auto auto;
+        padding: 0 10px;
+    }
+}
 .shop__card {
-    margin: 5px 2px;
+    margin: 5px 5px;
     width: 310px;
     background: #fff;
     border-radius: 6px;
     box-shadow: 2px 2px 2px 0px rgb(175, 175, 175);
+}
+@media screen and (max-width: 768px) {
+    .shop__card {
+        width: 92%;
+    }
 }
 .shop__card .card__img img {
     width: 310px;
@@ -163,9 +214,26 @@ body {
     object-fit: cover;
     border-radius: 6px 6px 0 0;
 }
+@media screen and (max-width: 768px) {
+    .shop__card .card__img img {
+        width: 100%;
+        height: 155px;
+        object-fit: cover;
+        border-radius: 6px 6px 0 0;
+    }
+}
 .shop__card .card__content {
     padding: 15px 25px;
 }
+.shop__card .card__content__inter,
+.shop__card .card__content__inter div {
+    display: flex;
+    justify-content: space-between;
+}
+.shop__card .card__content__inter div p{
+    color: gold;
+}
+
 .shop__card .card__ttl {
     margin-bottom: 7px;
     font-size: 18px;
@@ -195,8 +263,10 @@ body {
     border-radius: 6px;
     color: #fff;
     font-size: 14px;
+        cursor: pointer;
 }
-.shop__card .heart__img input, .shop__card .heart__img img{
+.shop__card .heart__img input,
+.shop__card .heart__img img {
     width: 50px;
 }
 .shops .error {
@@ -231,7 +301,7 @@ body {
 }
 
 /* registerページ と loginページ */
-.register-login__box x-guest-layout{
+.register-login__box x-guest-layout {
     width: 400px;
     background: #fff;
     border-radius: 6px;
@@ -240,6 +310,11 @@ body {
 .register-login__box .px-6 {
     padding: 0;
     margin-top: -100px;
+}
+@media screen and (max-width: 768px) {
+    .register-login__box .px-6 {
+        margin-top: 20px;
+    }
 }
 .register-login__box h2 {
     padding: 20px;
@@ -302,10 +377,25 @@ body {
     justify-content: space-between;
     width: 85%;
 }
+@media screen and (max-width: 768px) {
+    .shop-detail {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        width: 97%;
+    }
+}
 .shop-detail__card__box,
 .book__card__box {
     position: relative;
     width: 45%;
+}
+@media screen and (max-width: 768px) {
+    .shop-detail__card__box,
+    .book__card__box {
+        position: relative;
+        width: 100%;
+    }
 }
 .shop-detail__ttl {
     margin-top: 50px;
@@ -355,6 +445,17 @@ body {
     background: rgb(39, 83, 203);
     border-radius: 6px;
     box-shadow: 2px 2px 2px 0px rgb(175, 175, 175);
+}
+@media screen and (max-width: 768px) {
+    .book__card {
+        width: 100%;
+        height: 430px;
+        position: absolute;
+        top: 5px;
+        background: rgb(39, 83, 203);
+        border-radius: 6px;
+        box-shadow: 2px 2px 2px 0px rgb(175, 175, 175);
+    }
 }
 .book__card .book__ttl {
     margin: 20px;
@@ -421,6 +522,13 @@ body {
     color: #fff;
     cursor: pointer;
 }
+.error-message {
+    text-align: center;
+}
+.error-message ul li {
+    color: rgb(231, 70, 70);
+    list-style-type: none;
+}
 
 /* my-page */
 .my-page {
@@ -429,8 +537,21 @@ body {
     margin: 0 auto;
     width: 85%;
 }
+@media screen and (max-width: 768px) {
+    .my-page {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        margin: auto auto;
+    }
+}
 .booked__box {
     width: 33%;
+}
+@media screen and (max-width: 768px) {
+    .booked__box {
+        width: 100%;
+    }
 }
 .booked__box .booked__ttl h2 {
     margin-top: 100px;
@@ -444,26 +565,128 @@ body {
     border-radius: 6px;
     box-shadow: 2px 2px 2px 0px rgb(175, 175, 175);
 }
+@media screen and (max-width: 768px) {
+    .booked__box .booked__card {
+        margin: 5px 5px;
+        width: 97%;
+    }
+}
 .booked__box .booked__card .card__ttl {
     padding: 20px 20px 20px 40px;
     position: relative;
 }
-.booked__box .booked__card .card__ttl img {
+.booked__box .booked__card .edit__img {
+    position: absolute;
+    right: 80px;
+    top: 35px;
+}
+.booked__box .booked__card .cross__img {
+    position: absolute;
+    right: 30px;
+    top: 35px;
+}
+.booked__box .booked__card .card__ttl img,
+.booked__box .booked__card .cross__img .cross,
+.booked__box .booked__card .edit__img .edit {
     display: inline-block;
     position: relative;
     top: 4px;
     width: 20px;
-}
-.booked__box .booked__card .card__ttl .cross {
-    position: absolute;
-    right: 30px;
-    top: 35px;
 }
 .booked__box .booked__card .card__ttl h3 {
     display: inline-block;
     padding: 20px 20px;
     color: #fff;
     font-weight: normal;
+}
+.modal-delete,
+.modal-edit,
+.modal-delete-error {
+    display: none;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.modal__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.modal__content-inner {
+    background-color: white;
+    width: 500px;
+    text-align: center;
+    padding: 50px;
+}
+@media screen and (max-width: 768px) {
+    .modal__content-inner {
+        width: 100%;
+    }
+}
+.modal__booked-data {
+    color: #fff;
+    background-color: rgb(39, 83, 203);
+    border-radius: 6px;
+    width: 100%;
+    margin: 30px auto;
+}
+.modal__booked-data table {
+    display: inline-block;
+    padding: 10px 0;
+}
+.modal__booked-data table td {
+    padding: 10px 10px;
+}
+.modal__booked-data table td .input__box {
+    margin-bottom: 10px;
+}
+.modal__booked-data table td .input__box input {
+    padding: 6px 10px;
+    width: 200px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.modal__booked-data table td .select__box {
+    margin-bottom: 10px;
+    width: 100%;
+}
+.modal__booked-data table td .select__box select {
+    padding: 6px 10px;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    background-image: url(../image/arrow.png);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: 97% 8px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+.modal__content-inner .cancel-btn {
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    background: rgb(227, 38, 38);
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+}
+.modal__content-inner .return-btn {
+    border: none;
+    background: #fff;
+    text-decoration: underline;
+    cursor: pointer;
 }
 .booked__box .booked__card .booked-data table {
     display: block;
@@ -473,12 +696,29 @@ body {
     padding: 10px 20px;
     color: #fff;
 }
-.liked__box {
+.modal-delete-error {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.modal-delete-error p {
+    color: red;
+}
+.liked-history {
     width: 60%;
+}
+@media screen and (max-width: 768px) {
+    .liked-history {
+        width: 100%;
+    }
 }
 .liked__box .username h2 {
     margin-top: 20px;
     font-size: 30px;
+}
+@media screen and (max-width: 768px) {
+    .liked__box .username h2 {
+        display: none;
+    }
 }
 .liked__box .liked__ttl h2 {
     margin-top: 50px;
@@ -487,8 +727,75 @@ body {
 }
 .liked__box .liked__card__box {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
 }
-.
+@media screen and (max-width: 768px) {
+    .liked__box .liked__card__box {
+        width: 97%;
+        margin: 0 20px;
+    }
+}
+    
+.liked__box .liked__card__box .shop__card {
+    margin: 0 50px 50px 0;
+}
+@media screen and (max-width: 768px) {
+    .liked__box .liked__card__box .shop__card {
+        margin: 5px 0px;
+    }
+}
+.liked__box .error,
+.booked__box .error {
+    color: red;
+}
+.liked__box .liked__card__box .shop__card .openBtn-rating {
+    border: none;
+    background-color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+}
 
+
+/* ↓Rating */
+.modal-rating {
+    display: block;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.rating-inner {
+    display: flex;
+    justify-content: center;
+}
+.rating-star-box,
+.rating-score-box {
+    margin: 10px;
+}
+.rating-score-box {
+    width: 100px;
+}
+.rating-star-box .star,
+.rating-score-box p {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 36px;
+    color: gold;
+}
+@media screen and (max-width: 768px) {
+    .rating-star-box .star,
+    .rating-score-box p {
+        font-size: 20px;
+    }
+}
+.modal-rating textarea {
+    resize: none;
+}
+@media screen and (max-width: 768px) {
+    .modal-rating textarea {
+        width: 100%;
+    }
+}
